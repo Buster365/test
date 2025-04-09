@@ -3,55 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buster365's Website</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background: url('bg.jpg') no-repeat center center fixed;
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        .logo {
-            width: 200px;
-            margin-bottom: 30px;
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .content {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 30px;
-            border-radius: 10px;
-            max-width: 600px;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-    </style>
+    <title>Buster365 - Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="content">
-        <img src="logo.png" alt="Website Logo" class="logo">
-        <h1>Welcome to My Website</h1>
-        <p>This site is under construction. Check back soon for updates!</p>
-        <p>Powered by GitHub Pages</p>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="Buster365 Logo" class="logo">
+            <h1>Welcome to My Professional Portfolio</h1>
+        </header>
+
+        <main>
+            <section class="content-section">
+                <h2>About Me</h2>
+                <div id="about-content"></div>
+            </section>
+
+            <section class="content-section">
+                <h2>My Projects</h2>
+                <div id="projects-container"></div>
+            </section>
+
+            <section class="content-section">
+                <h2>Contact</h2>
+                <div id="contact-container"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="current-year"></span> Buster365. All rights reserved.</p>
+        </footer>
     </div>
+
+    <!-- Load JSON data -->
+    <script src="data.json" type="application/json" id="site-data"></script>
+    
+    <!-- Load TypeScript (compiled to JS) -->
+    <script src="script.js"></script>
+    
+    <!-- Alternative: Direct TypeScript loading (requires ts-loader in build process) -->
+    <!-- <script src="script.ts" type="module"></script> -->
 </body>
 </html>
